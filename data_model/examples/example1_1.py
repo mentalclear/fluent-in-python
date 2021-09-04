@@ -67,3 +67,10 @@ def spades_high(card):
 print("\ncards in order:")
 for card in sorted(deck, key=spades_high):
     print(card)
+
+
+
+# Special methods are meant to be called by the Python interpreter
+# don’t write my_object.__len__(). You write len(my_object) and, 
+# if my_object is an instance of a user-defined class, then Python calls 
+# the __len__ method you implemented.
