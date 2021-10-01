@@ -35,4 +35,23 @@ def second_iter():
     print(f"Total new words: {counter}")
     print(f"Time elapsed: {stop-start}")
 
-second_iter()
+#second_iter()
+
+def third_iter():
+    my_words = [elt.strip() for elt in open("inetrmediate_python_prog/sonnets/sonnet_words.txt", "r").readlines()]
+    word_list = [elt.strip() for elt in open("inetrmediate_python_prog/sonnets/sowpods.txt", "r").readlines()]
+    word_set = set(word_list)
+
+    counter = 0
+
+    start = time.time()
+    for word in my_words:
+        if word not in word_set:
+            print(word)
+            counter += 1
+    stop = time.time()
+
+    print(f"Total new words: {counter}")
+    print(f"Time elapsed: {stop-start}")
+
+third_iter()
