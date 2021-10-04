@@ -1,6 +1,6 @@
 import sqlite3
 
-connection = sqlite3.connect("jeopardy.db")
+connection = sqlite3.connect("inetrmediate_python_prog/jeopardy/jeopardy.db")
 cursor = connection.cursor()
 
 cursor.execute("SELECT id, name FROM category ORDER BY RANDOM() LIMIT 1")
